@@ -10,6 +10,7 @@ module.exports = async ({ from, to, subject, text, html}) => {
             },
         });
 
+        
         // send mail with defined transport object
     let info = await transporter.sendMail({
         from: `ShareApp <${from}>`, // sender address
