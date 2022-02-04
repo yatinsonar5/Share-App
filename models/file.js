@@ -1,6 +1,4 @@
-// const { Timestamp } = require("bson");
 const mongoose = require("mongoose");
-// const { stringify } = require("querystring");
 const Schema = mongoose.Schema;
 
 const filesSchema = new Schema({
