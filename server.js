@@ -9,17 +9,12 @@ connectDB();
 
 //Cors
 const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS.split(',')
-    // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
-  }
-  
-  // Default configuration looks like
-  // {
-  //     "origin": "*",
-  //     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  //     "preflightContinue": false,
-  //     "optionsSuccessStatus": 204
-  //   }
+      origin: ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300'],
+      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+      preflightContinue: false,
+      allowedHeaders: ['Content-Type'],
+      optionsSuccessStatus: 204
+    }
   
   app.use(cors(corsOptions))
 
